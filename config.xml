@@ -3,13 +3,13 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "ng.com.onlinemedia.ontology"
+        id        = "ng.com.onlinemedia.tods"
         version   = "1.0.2">
 
-    <name>Mobile Ontology</name>
+    <name>TODS</name>
 
     <description>
-        Mobile Ontology Application
+        Traffic Offense Documentation System
     </description>
 
     <author href="http://onlinemedia.com.ng" email="admin@onlinemedia.com.ng">
@@ -62,7 +62,7 @@
     <engine name="android" spec="^6.2.3" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <plugin name="cordova-plugin-whitelist" spec="1.3.2" />
-    <!-- <plugin name="cordova-plugin-camera" spec="~4.0.3" /> -->
+    <plugin name="cordova-plugin-camera" spec="~4.0.3" />
     <!-- <plugin name="cordova-plugin-exit" spec="1.0.2" /> -->
     <plugin name="cordova-plugin-device" />
     <allow-intent href="http://*/*" />
