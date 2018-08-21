@@ -36,7 +36,19 @@
 
                 $$(document).on('deviceready ', function(){
                   console.log(navigator.camera);
+                    //navigator.camera.cleanup(onSuccess, onFail);
+                    navigator.camera.getPicture(onSuccess, onFail, Camera.PictureSourceType.CAMERA);
+                    function onSuccess() {
+                        console.log("Camera cleanup success.")
+                    }
+                     
+                    function onFail(message) {
+                        alert('Failed because: ' + message);
+                    }
                 });
+
+
+
                 
             }
         },
