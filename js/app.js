@@ -6,7 +6,14 @@ var theme = 'md';
 
 // Init App
 var app = new Framework7({
-  id: 'ng.com.onlinemedia.ontology',
+  on: {
+    init() {
+      //device ready here
+      console.log(navigator);
+      console.log(navigator.camera);
+    },
+  },
+  id: 'ng.com.onlinemedia.tods',
   name: app_name,
   view: {
     pushState: true
