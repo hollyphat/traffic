@@ -1,25 +1,27 @@
 <template>
-        <div class="page no-toolbar no-navbar no-swipeback" data-name="login">
-            <div class="page-content login-screen-content login-page" style="padding-top: 45px;">
-                <!--<div class="login-screen-title">Mobile Year Book</div>-->
+        <div class="page no-swipeback" data-name="login">
+            <div class="navbar">
+                <div class="navbar-inner sliding">                  
+                    <div class="title">Login</div>
+                </div>
+            </div>
+            <div class="page-content login-screen-content login-page" style="padding-top: 45px;">                
                 <form class="login-form">
-                    <h3 class="logo-text">Mobile Ontology</h3>
+                    <h3 class="logo-text">FRSC</h3>
 
                     <h5 class="center">Login to your user account</h5>
                     <div class="list">
                         <ul>
                             <li class="item-content item-input item-input-with-value">
-                                <div class="item-media"><i class="icon material-icons">envelope</i></div>
                                 <div class="item-inner">
-                                    <div class="item-title item-label">Email Address</div>
+                                    <div class="item-title item-label">Username</div>
                                     <div class="item-input-wrap">
-                                        <input type="email" required validate placeholder="Email Address" id="user-email" class="input-with-value user-email">
+                                        <input type="text" required validate placeholder="Username" id="user-name" class="input-with-value user-name">
                                         <span class="input-clear-button"></span>
                                     </div>
                                 </div>
                             </li>
                             <li class="item-content item-input">
-                                <div class="item-media"><i class="icon material-icons">lock</i></div>
                                 <div class="item-inner">
                                     <div class="item-title item-label">Password</div>
                                     <div class="item-input-wrap">
@@ -46,8 +48,7 @@
                                 </div>
     
                                 <div class="col-25">&nbsp;</div>
-                            </div>
-                            <a href="/forgot-password/">Forgot Password?</a>
+                            </div>                            
                         </div>
                         <div class="block-footer">&nbsp;</div>
                     </div>
@@ -71,14 +72,14 @@
                         e.preventDefault();
                         var router = this.$router;
     
-                        var email = $(".user-email").val();
+                        var username = $(".user-name").val();
                         var password = $(".user-password").val();
                         
-                        if (email == "" || password == "") {
+                        if (username == "" || password == "") {
                             
                             app.toast.create({
-                                text: 'All fields are required',
-                                position: 'bottom',
+                                text: 'Kindly enter your username and password',
+                                position: 'center',
                                 closeTimeout: 3000
                             }).open();                        
                             //self.toastIcon.open();
@@ -98,7 +99,7 @@
                             timeout: 45000,
                             data: {
                                 'login-ok': '',
-                                'email': email,
+                                'username': username,
                                 'password': password
                             },
                             success: function(f) {
@@ -114,16 +115,11 @@
                                     $("#loader").addClass('hide');
                                 }else {
                                     //console.log(f.datas);
-                                    var herbs = JSON.stringify(f.herbs);
-                                    var saved_herbs = JSON.stringify(f.saved_herbs);
-                                    //console.log(chats_lists);
-                                    sessionStorage.setItem("herbs",herbs);
+                                    var offence = JSON.stringify(f.offence);
+                                    //sessionStorage.setItem("herbs",herbs);
                                     sessionStorage.setItem("user_id", f.datas['id']);
-                                    sessionStorage.setItem("name", f.datas['names']);
-                                    sessionStorage.setItem("email", f.datas['email']);
-                                    sessionStorage.setItem("phone", f.datas['phone']);
-                                    sessionStorage.setItem("gender", f.datas['gender']);
-                                    sessionStorage.setItem("saved_herbs",saved_herbs);
+                                    sessionStorage.setItem("name", f.datas['names']);                                    
+                                    sessionStorage.setItem("offence",offence);
                                     $("#signIn-btn").show();
                                     $("#loader").addClass('hide');
                                     mainView.router.navigate("/home/",{});
