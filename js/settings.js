@@ -1,4 +1,4 @@
-const app_name = "Mobile Ontology";
+const app_name = "Mobile frsc";
 var developer_url = "https://onlinemedia.com.ng";
 var developer_email = "admin@onlinemedia.com.ng";
 var supervisor = "OnlineMedia";
@@ -13,14 +13,14 @@ env = "locals";
 var base_url;
 
 if(env == "local"){
-    url = "http://project.apps/ontology/api.php";
-    base_url = "http://project.apps/ontology";
+    url = "http://project.apps/frsc/api.php";
+    base_url = "http://project.apps/frsc";
     server_upload_url = "http://project.apps/cdn/";
 
 }else{
-    base_url = "https://projects.onlinemedia.com.ng/ontology";
-    url = 'https://projects.onlinemedia.com.ng/ontology/api.php';
+    base_url = "https://projects.onlinemedia.com.ng/frsc";
+    url = 'https://projects.onlinemedia.com.ng/frsc/api.php';
     server_upload_url = "https://cdn.uwansell.com.ng/apps/";
 }
 
-app_path = "ontology/";
+app_path = "frsc/";

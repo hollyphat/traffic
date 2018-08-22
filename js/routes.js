@@ -21,7 +21,7 @@ var routes=[ // Index page
 
   ,
   {
-      path: '/forgot-password/', componentUrl: './pages/fp.html', name: 'forgot-password',
+      path: '/offense/', componentUrl: './pages/offense.html', name: 'offense',
   }
   ,
   {
@@ -33,7 +33,7 @@ var routes=[ // Index page
   }
   ,
   {
-      path: '/camera/', componentUrl: './pages/camera.html', name: 'camera',
+      path: '/new/', componentUrl: './pages/new.html', name: 'new-offenders',
   },
   ,
   {
