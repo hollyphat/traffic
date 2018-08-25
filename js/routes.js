@@ -29,7 +29,7 @@ var routes=[ // Index page
   }
   ,
   {
-      path: '/view-herb/', componentUrl: './pages/view-herb.html', name: 'profile',
+      path: '/offenders/', componentUrl: './pages/edit-offenders.html', name: 'edit-offenders',
   }
   ,
   {
