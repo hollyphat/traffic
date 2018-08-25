@@ -25,7 +25,7 @@
                     <a href="/new/" class=""> New Offender</a>
                   </li>
                   <li>
-                    <a href="/offenders/" class=""> Offenders</a>
+                    <a href="/offenders/" class="">Edit Offenders</a>
                   </li>
                   
                   <li>
@@ -68,7 +68,7 @@
                         sessionStorage.removeItem("user_id");
                         sessionStorage.removeItem("offence");
                         sessionStorage.removeItem("name");                        
-                        mainView.router.navigate("/login/",{});
+                        mainView.router.navigate("/",{});
                     });
                 });                                            
                 
