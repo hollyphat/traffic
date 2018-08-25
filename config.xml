@@ -65,6 +65,7 @@
     <!-- <plugin name="cordova-plugin-exit" spec="1.0.2" /> -->
     <plugin name="cordova-plugin-device" />
     <plugin name="cordova-plugin-pdf-viewer" />
+    <plugin name="cordova-plugin-document-viewer" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />    
 </widget>
