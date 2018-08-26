@@ -318,37 +318,7 @@
                                 $(".res").addClass("hide");
                                 $(".edit-reg").addClass("hide");
                                         
-                                    //window.open(f.htmls);
-                                    
-
-                                    var options = {
-                                      title: "Report",
-                                      documentView : {
-                                        closeLabel : "Close"
-                                      },
-                                      navigationView : {
-                                        closeLabel : "View"
-                                      },
-                                      email : {
-                                        enabled : true
-                                      },
-                                      print : {
-                                        enabled : true
-                                      },
-                                      openWith : {
-                                        enabled : true
-                                      },
-                                      bookmarks : {
-                                        enabled : true
-                                      },
-                                      search : {
-                                        enabled : true
-                                      },
-                                      autoClose: {
-                                        onPause : false
-                                      }
-                                    }
-                                    PDFViewer.showPDF(f.htmls);
+                                    window.open(f.htmls);
                                     // It end here
 
 
@@ -361,7 +331,7 @@
                                 }).open();
                             }
 
-                            cordova.plugins.SitewaertsDocumentViewer.viewDocument(f.htmls, "application/pdf", options);
+                            
                         },
                         error: function (e) {
                            app.dialog.close();
