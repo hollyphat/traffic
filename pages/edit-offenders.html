@@ -228,6 +228,8 @@
 
                                 $(".edit-reg").removeClass("hide");
                                 $(".res").removeClass("hide");
+
+                                $("#reg-id").attr("disabled",true);
                             }
                         }
                     });
@@ -297,6 +299,8 @@
                            //console.log(f);
                            app.dialog.close();
 
+                           $("#reg-id").attr("disabled",false);
+                           //$("#reg-id").removeAttr()
                             if(f.ok == 1){
                                 $("#plate-no").val("");
                                 $("#licence-no").val("");
